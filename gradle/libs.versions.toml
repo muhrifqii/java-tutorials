@@ -1,0 +1,49 @@
+# https://docs.spring.io/spring-boot/appendix/dependency-versions/coordinates.html
+[versions]
+lombok = "1.18.34"
+spring-boot = "3.3.3"
+spring-ai = "1.0.0-SNAPSHOT"
+reactor-core = "3.6.9"
+flyway = "10.12.0"
+micrometer-tracing = "1.3.3"
+micrometer-registry = "1.13.3"
+otel = "1.37.0"
+test-containers = "1.19.8"
+jackson = "2.17.2"
+
+[libraries]
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+
+spring-boot-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring-boot" }
+spring-boot-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux", version.ref = "spring-boot" }
+spring-boot-r2dbc = { module = "org.springframework.boot:spring-boot-starter-data-r2dbc", version.ref = "spring-boot" }
+spring-boot-devtools = { module = "org.springframework.boot:spring-boot-devtools", version.ref = "spring-boot" }
+spring-boot-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot" }
+spring-boot-testcontainers = { module = "org.springframework.boot:spring-boot-testcontainers", version.ref = "spring-boot" }
+
+spring-ai-bom = { group = "org.springframework.ai", name = "spring-ai-bom", version.ref = "spring-ai" }
+spring-ai-ollama = { group = "org.springframework.ai", name = "spring-ai-ollama-spring-boot-starter" }
+
+reactor-core = { module = "io.projectreactor:reactor-core", version.ref = "reactor-core" }
+reactor-test = { module = "io.projectreactor:reactor-test", version.ref = "reactor-core" }
+
+flyway-core = { module = "org.flywaydb:flyway-core", version.ref = "flyway" }
+flyway-postgresql = { module = "org.flywaydb:flyway-database-postgresql", version.ref = "flyway" }
+postgresql = { module = "org.postgresql:postgresql", version = "42.7.3" }
+postgresql-r2dbc = { module = "org.postgresql:r2dbc-postgresql", version = "1.0.5.RELEASE" }
+
+junit = { module = "org.junit.jupiter:junit-jupiter", version = "5.10.3" }
+testcontainer-junit = { module = "org.testcontainers:junit-jupiter", version.ref = "test-containers" }
+
+micrometer-registry = { module = "io.micrometer:micrometer-registry-otlp", version.ref = "micrometer-registry" }
+micrometer-tracing-otel = { module = "io.micrometer:micrometer-tracing-bridge-otel", version.ref = "micrometer-tracing" }
+otel-exporter = { module = "io.opentelemetry:opentelemetry-exporter-otlp", version.ref = "otel" }
+
+jackson-jsr310 = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310", version.ref = "jackson" }
+uuid = { module = "com.fasterxml.uuid:java-uuid-generator", version = "5.1.0" }
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+graalvm = { id = "org.graalvm.buildtools.native", version = "0.10.2" }
+
+[bundles]
