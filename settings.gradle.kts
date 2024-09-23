@@ -9,3 +9,4 @@ pluginManagement {
 rootProject.name = "Java-Tutorials"
 
 include("functional-interfaces")
+include("stream-api")
